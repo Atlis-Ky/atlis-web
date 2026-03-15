@@ -1,49 +1,25 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Discography from "./pages/Discography";
 import Shop from "./pages/Shop";
 import Contact from "./pages/Contact";
+import ComponentShowcase from "./pages/ComponentShowcase";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <nav className="navbar">
-          <div className="nav-container">
-            <Link to="/" className="nav-logo">
-              Atlis
-            </Link>
-            <ul className="nav-menu">
-              <li className="nav-item">
-                <Link to="/" className="nav-link">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/about" className="nav-link">
-                  About
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/discography" className="nav-link">
-                  Discography
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/shop" className="nav-link">
-                  Shop
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/contact" className="nav-link">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <Navigation logo="Atlis">
+          <Navigation.Item to="/">Home</Navigation.Item>
+          <Navigation.Item to="/about">About</Navigation.Item>
+          <Navigation.Item to="/discography">Discography</Navigation.Item>
+          <Navigation.Item to="/shop">Shop</Navigation.Item>
+          <Navigation.Item to="/contact">Contact</Navigation.Item>
+          <Navigation.Item to="/showcase">Components</Navigation.Item>
+        </Navigation>
 
         <main className="main-content">
           <Routes>
@@ -52,6 +28,7 @@ function App() {
             <Route path="/discography" element={<Discography />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/showcase" element={<ComponentShowcase />} />
           </Routes>
         </main>
 

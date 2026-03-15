@@ -1,0 +1,300 @@
+/* ============================================
+   LAYOUT COMPONENT STYLES
+   ============================================ */
+
+/* ========== CONTAINER ========== */
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+
+.container-sm {
+  max-width: var(--container-sm);
+}
+
+.container-md {
+  max-width: var(--container-md);
+}
+
+.container-lg {
+  max-width: var(--container-lg);
+}
+
+.container-xl {
+  max-width: var(--container-xl);
+}
+
+.container-2xl {
+  max-width: var(--container-2xl);
+}
+
+.container-full {
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+  }
+}
+
+/* ========== SECTION ========== */
+
+.section {
+  width: 100%;
+}
+
+/* Section Padding */
+.section-padding-none {
+  padding: 0;
+}
+
+.section-padding-sm {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+
+.section-padding-md {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
+}
+
+.section-padding-lg {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+
+.section-padding-xl {
+  padding-top: var(--space-24);
+  padding-bottom: var(--space-24);
+}
+
+/* Section Backgrounds */
+.section-bg-default {
+  background-color: var(--bg-primary);
+}
+
+.section-bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.section-bg-dark {
+  background-color: var(--bg-dark);
+  color: var(--text-inverse);
+}
+
+.section-bg-gradient {
+  background: var(--bg-gradient);
+  color: var(--text-inverse);
+}
+
+@media (max-width: 768px) {
+  .section-padding-sm {
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-6);
+  }
+
+  .section-padding-md {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-8);
+  }
+
+  .section-padding-lg {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-12);
+  }
+
+  .section-padding-xl {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
+  }
+}
+
+/* ========== GRID ========== */
+
+.grid-layout {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-cols-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.grid-cols-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+.grid-cols-12 {
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.grid-gap-sm {
+  gap: var(--space-4);
+}
+.grid-gap-md {
+  gap: var(--space-6);
+}
+.grid-gap-lg {
+  gap: var(--space-8);
+}
+.grid-gap-xl {
+  gap: var(--space-12);
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+  .grid-responsive.grid-cols-6,
+  .grid-responsive.grid-cols-5,
+  .grid-responsive.grid-cols-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-responsive.grid-cols-6,
+  .grid-responsive.grid-cols-5,
+  .grid-responsive.grid-cols-4,
+  .grid-responsive.grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-responsive.grid-cols-6,
+  .grid-responsive.grid-cols-5,
+  .grid-responsive.grid-cols-4,
+  .grid-responsive.grid-cols-3,
+  .grid-responsive.grid-cols-2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* ========== FLEX ========== */
+
+.flex-layout {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+.items-end {
+  align-items: flex-end;
+}
+.items-center {
+  align-items: center;
+}
+.items-stretch {
+  align-items: stretch;
+}
+
+.flex-gap-sm {
+  gap: var(--space-4);
+}
+.flex-gap-md {
+  gap: var(--space-6);
+}
+.flex-gap-lg {
+  gap: var(--space-8);
+}
+.flex-gap-xl {
+  gap: var(--space-12);
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* ========== SPACER ========== */
+
+.spacer-y-sm {
+  height: var(--space-4);
+}
+.spacer-y-md {
+  height: var(--space-8);
+}
+.spacer-y-lg {
+  height: var(--space-12);
+}
+.spacer-y-xl {
+  height: var(--space-16);
+}
+.spacer-y-2xl {
+  height: var(--space-24);
+}
+
+.spacer-x-sm {
+  width: var(--space-4);
+}
+.spacer-x-md {
+  width: var(--space-8);
+}
+.spacer-x-lg {
+  width: var(--space-12);
+}
+.spacer-x-xl {
+  width: var(--space-16);
+}
+.spacer-x-2xl {
+  width: var(--space-24);
+}
+
+/* ========== STACK (Vertical Spacing for Children) ========== */
+
+.stack > * + * {
+  margin-top: var(--space-4);
+}
+
+.stack-sm > * + * {
+  margin-top: var(--space-2);
+}
+
+.stack-md > * + * {
+  margin-top: var(--space-4);
+}
+
+.stack-lg > * + * {
+  margin-top: var(--space-6);
+}
+
+.stack-xl > * + * {
+  margin-top: var(--space-8);
+}

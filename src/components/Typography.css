@@ -1,0 +1,213 @@
+/* ============================================
+   TYPOGRAPHY COMPONENT STYLES
+   ============================================ */
+
+/* ========== HEADINGS ========== */
+
+.heading {
+  font-family: var(--font-heading);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+.heading-1 {
+  font-size: var(--text-5xl);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.05em;
+}
+
+.heading-2 {
+  font-size: var(--text-4xl);
+  line-height: var(--leading-tight);
+}
+
+.heading-3 {
+  font-size: var(--text-3xl);
+  line-height: var(--leading-snug);
+}
+
+.heading-4 {
+  font-size: var(--text-2xl);
+  line-height: var(--leading-snug);
+}
+
+.heading-5 {
+  font-size: var(--text-xl);
+  line-height: var(--leading-normal);
+}
+
+.heading-6 {
+  font-size: var(--text-lg);
+  line-height: var(--leading-normal);
+}
+
+/* ========== TEXT ========== */
+
+.text {
+  margin: 0;
+  line-height: var(--leading-normal);
+}
+
+/* Text Sizes */
+.text-size-xs {
+  font-size: var(--text-xs);
+}
+
+.text-size-sm {
+  font-size: var(--text-sm);
+}
+
+.text-size-base {
+  font-size: var(--text-base);
+}
+
+.text-size-lg {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+}
+
+.text-size-xl {
+  font-size: var(--text-xl);
+  line-height: var(--leading-relaxed);
+}
+
+.text-size-2xl {
+  font-size: var(--text-2xl);
+  line-height: var(--leading-relaxed);
+}
+
+/* Text Colors */
+.text-color-primary {
+  color: var(--text-primary);
+}
+
+.text-color-secondary {
+  color: var(--text-secondary);
+}
+
+.text-color-tertiary {
+  color: var(--text-tertiary);
+}
+
+.text-color-inverse {
+  color: var(--text-inverse);
+}
+
+.text-color-success {
+  color: var(--color-success);
+}
+
+.text-color-warning {
+  color: var(--color-warning);
+}
+
+.text-color-error {
+  color: var(--color-error);
+}
+
+/* Font Weights */
+.font-light {
+  font-weight: var(--font-light);
+}
+
+.font-normal {
+  font-weight: var(--font-normal);
+}
+
+.font-medium {
+  font-weight: var(--font-medium);
+}
+
+.font-semibold {
+  font-weight: var(--font-semibold);
+}
+
+.font-bold {
+  font-weight: var(--font-bold);
+}
+
+.font-extrabold {
+  font-weight: var(--font-extrabold);
+}
+
+/* ========== LEAD TEXT ========== */
+
+.text-lead {
+  font-size: var(--text-xl);
+  line-height: var(--leading-relaxed);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ========== LABEL ========== */
+
+.label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.label-required {
+  color: var(--color-error);
+  margin-left: var(--space-1);
+}
+
+/* ========== RESPONSIVE TYPOGRAPHY ========== */
+
+@media (max-width: 768px) {
+  .heading-1 {
+    font-size: var(--text-4xl);
+  }
+
+  .heading-2 {
+    font-size: var(--text-3xl);
+  }
+
+  .heading-3 {
+    font-size: var(--text-2xl);
+  }
+
+  .heading-4 {
+    font-size: var(--text-xl);
+  }
+
+  .text-lead {
+    font-size: var(--text-lg);
+  }
+}
+
+/* ========== UTILITY TEXT STYLES ========== */
+
+.text-gradient {
+  background: var(--bg-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-truncate-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

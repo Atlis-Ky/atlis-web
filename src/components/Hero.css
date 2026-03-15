@@ -1,0 +1,164 @@
+/* ============================================
+   HERO COMPONENT STYLES
+   ============================================ */
+
+.hero {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-lg);
+  padding: var(--space-6);
+}
+
+/* ========== VARIANTS ========== */
+
+.hero-default {
+  background-color: var(--bg-secondary);
+}
+
+.hero-default .hero-overlay {
+  display: none;
+}
+
+.hero-gradient {
+  background: var(--bg-gradient);
+  color: var(--color-white);
+}
+
+.hero-dark {
+  background-color: var(--bg-dark);
+  color: var(--color-white);
+}
+
+.hero-minimal {
+  background-color: var(--bg-primary);
+}
+
+.hero-minimal .hero-overlay {
+  display: none;
+}
+
+/* ========== SIZES ========== */
+
+.hero-sm {
+  min-height: 300px;
+}
+
+.hero-md {
+  min-height: 400px;
+}
+
+.hero-lg {
+  min-height: 500px;
+}
+
+.hero-xl {
+  min-height: 600px;
+}
+
+/* ========== ALIGNMENT ========== */
+
+.hero-align-left .hero-content {
+  text-align: left;
+  margin-right: auto;
+}
+
+.hero-align-center .hero-content {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-align-right .hero-content {
+  text-align: right;
+  margin-left: auto;
+}
+
+/* ========== HERO ELEMENTS ========== */
+
+.hero-title {
+  margin-bottom: var(--space-6);
+  color: inherit;
+}
+
+.hero-subtitle {
+  margin-bottom: var(--space-8);
+  max-width: 600px;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.hero-align-center .hero-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.hero-align-center .hero-actions {
+  justify-content: center;
+}
+
+.hero-align-right .hero-actions {
+  justify-content: flex-end;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 768px) {
+  .hero-sm {
+    min-height: 250px;
+  }
+
+  .hero-md {
+    min-height: 300px;
+  }
+
+  .hero-lg {
+    min-height: 400px;
+  }
+
+  .hero-xl {
+    min-height: 450px;
+  }
+
+  .hero-content {
+    padding: var(--space-4);
+  }
+
+  .hero-title {
+    margin-bottom: var(--space-4);
+  }
+
+  .hero-subtitle {
+    margin-bottom: var(--space-6);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+}
