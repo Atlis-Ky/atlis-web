@@ -6,7 +6,7 @@ import "./Button.css";
  *
  * A flexible, reusable button component with multiple variants and sizes
  *
- * @param {string} variant - 'primary', 'secondary', 'outline', 'ghost', 'danger'
+ * @param {string} variant - 'primary', 'secondary', 'tertiary', 'ghost', 'accent', 'danger'
  * @param {string} size - 'sm', 'md', 'lg', 'xl'
  * @param {boolean} fullWidth - Make button full width
  * @param {function} onClick - Click handler

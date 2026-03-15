@@ -21,7 +21,7 @@
 }
 
 .btn:focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
 
@@ -59,90 +59,124 @@
 
 /* ========== VARIANTS ========== */
 
-/* Primary Button */
+/* Primary Button - Black */
 .btn-primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-black);
   color: var(--color-white);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-black);
 }
 
 .btn-primary:hover:not(:disabled) {
-  background-color: var(--color-primary-dark);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-1px);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-color: var(--color-black);
 }
 
 .btn-primary:active:not(:disabled) {
-  transform: translateY(0);
-  box-shadow: var(--shadow-sm);
+  background-color: var(--color-gray-100);
+  color: var(--color-black);
 }
 
-/* Secondary Button */
+/* Secondary Button - White with Black Border */
 .btn-secondary {
-  background-color: var(--color-gray-800);
-  color: var(--color-white);
-  box-shadow: var(--shadow-sm);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
 }
 
 .btn-secondary:hover:not(:disabled) {
-  background-color: var(--color-gray-900);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-1px);
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
 .btn-secondary:active:not(:disabled) {
-  transform: translateY(0);
-  box-shadow: var(--shadow-sm);
+  background-color: var(--color-gray-900);
 }
 
-/* Outline Button */
+/* Tertiary Button - Black Border with White Border Hover */
+.btn-tertiary {
+  background-color: transparent;
+  color: var(--color-white);
+  border: var(--border-width-2) solid var(--color-white);
+}
+
+.btn-tertiary:hover:not(:disabled) {
+  background-color: white;
+  color: var(--color-black);
+  border-color: var(--color-white);
+}
+
+.btn-tertiary:active:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+/* Outline Button - Alias for backwards compatibility */
 .btn-outline {
   background-color: transparent;
-  color: var(--color-primary);
-  border: var(--border-width-2) solid var(--color-primary);
+  color: var(--color-black);
+  border: var(--border-width-2) solid var(--color-black);
 }
 
 .btn-outline:hover:not(:disabled) {
-  background-color: var(--color-primary-subtle);
-  border-color: var(--color-primary-dark);
-  color: var(--color-primary-dark);
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
 }
 
 .btn-outline:active:not(:disabled) {
-  background-color: var(--color-primary);
+  background-color: rgba(255, 255, 255, 0.1);
   color: var(--color-white);
+  border-color: var(--color-white);
 }
 
-/* Ghost Button */
+/* Ghost Button - Minimal */
 .btn-ghost {
   background-color: transparent;
   color: var(--text-primary);
+  border: 1px solid transparent;
 }
 
 .btn-ghost:hover:not(:disabled) {
-  background-color: var(--color-gray-100);
+  background-color: var(--color-gray-50);
+  border-color: var(--color-gray-200);
 }
 
 .btn-ghost:active:not(:disabled) {
-  background-color: var(--color-gray-200);
+  background-color: var(--color-gray-100);
 }
 
-/* Danger Button */
+/* Danger Button - Red Accent */
 .btn-danger {
   background-color: var(--color-error);
   color: var(--color-white);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-error);
 }
 
 .btn-danger:hover:not(:disabled) {
   background-color: #dc2626;
-  box-shadow: var(--shadow-md);
-  transform: translateY(-1px);
+  border-color: #dc2626;
 }
 
 .btn-danger:active:not(:disabled) {
-  transform: translateY(0);
-  box-shadow: var(--shadow-sm);
+  background-color: #b91c1c;
+}
+
+/* Accent Button - Teal Highlight */
+.btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: 1px solid var(--color-accent);
+}
+
+.btn-accent:hover:not(:disabled) {
+  background-color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+}
+
+.btn-accent:active:not(:disabled) {
+  background-color: #0a7c6f;
 }
 
 /* ========== MODIFIERS ========== */

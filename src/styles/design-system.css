@@ -6,47 +6,49 @@
 :root {
   /* ========== COLORS ========== */
 
-  /* Primary Colors */
-  --color-primary: #2563eb;
-  --color-primary-dark: #1d4ed8;
-  --color-primary-light: #3b82f6;
-  --color-primary-subtle: #dbeafe;
+  /* Primary Colors - Black & White */
+  --color-primary: #000000;
+  --color-primary-dark: #000000;
+  --color-primary-light: #1a1a1a;
+  --color-primary-subtle: #f5f5f5;
 
-  /* Accent Colors */
-  --color-accent: #8b5cf6;
-  --color-accent-dark: #7c3aed;
-  --color-accent-light: #a78bfa;
+  /* Accent Color - Teal */
+  --color-accent: #14b8a6;
+  --color-accent-dark: #0d9488;
+  --color-accent-light: #2dd4bf;
+  --color-accent-subtle: #ccfbf1;
 
   /* Neutral Colors */
-  --color-black: #0f172a;
-  --color-gray-900: #1e293b;
-  --color-gray-800: #334155;
-  --color-gray-700: #475569;
-  --color-gray-600: #64748b;
-  --color-gray-500: #94a3b8;
-  --color-gray-400: #cbd5e1;
-  --color-gray-300: #e2e8f0;
-  --color-gray-200: #f1f5f9;
-  --color-gray-100: #f8fafc;
+  --color-black: #000000;
   --color-white: #ffffff;
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e5e5e5;
+  --color-gray-300: #d4d4d4;
+  --color-gray-400: #a3a3a3;
+  --color-gray-500: #737373;
+  --color-gray-600: #525252;
+  --color-gray-700: #404040;
+  --color-gray-800: #262626;
+  --color-gray-900: #171717;
 
   /* Semantic Colors */
-  --color-success: #10b981;
+  --color-success: #14b8a6;
   --color-warning: #f59e0b;
   --color-error: #ef4444;
-  --color-info: #06b6d4;
+  --color-info: #14b8a6;
 
   /* Background Colors */
   --bg-primary: var(--color-white);
-  --bg-secondary: var(--color-gray-100);
-  --bg-dark: var(--color-gray-900);
-  --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --bg-gradient-subtle: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  --bg-secondary: var(--color-gray-50);
+  --bg-dark: var(--color-black);
+  --bg-gradient: linear-gradient(135deg, #000000 0%, #262626 100%);
+  --bg-gradient-subtle: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
 
   /* Text Colors */
-  --text-primary: var(--color-gray-900);
-  --text-secondary: var(--color-gray-600);
-  --text-tertiary: var(--color-gray-500);
+  --text-primary: var(--color-black);
+  --text-secondary: var(--color-gray-500);
+  --text-tertiary: var(--color-gray-400);
   --text-inverse: var(--color-white);
 
   /* ========== TYPOGRAPHY ========== */
@@ -300,4 +302,35 @@ body {
 }
 .max-w-2xl {
   max-width: var(--container-2xl);
+}
+
+/* ========== ACCENT COLOR UTILITIES ========== */
+
+/* Accent Text Colors */
+.text-accent {
+  color: var(--color-accent);
+}
+.text-accent-dark {
+  color: var(--color-accent-dark);
+}
+.text-accent-light {
+  color: var(--color-accent-light);
+}
+
+/* Accent Background Colors */
+.bg-accent {
+  background-color: var(--color-accent);
+}
+.bg-accent-subtle {
+  background-color: var(--color-accent-subtle);
+}
+
+/* Accent Borders */
+.border-accent {
+  border-color: var(--color-accent);
+}
+
+/* Accent Hover Effects */
+.hover-accent:hover {
+  color: var(--color-accent);
 }

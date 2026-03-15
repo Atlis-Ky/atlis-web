@@ -20,12 +20,15 @@ function ComponentShowcase() {
       <Hero
         title="Component Library Showcase"
         subtitle="Explore all the reusable components built for your music project"
-        variant="gradient"
+        variant="dark"
         size="lg"
       >
-        <Button size="lg">Get Started</Button>
-        <Button variant="outline" size="lg">
-          Learn More
+        <Button size="lg">Primary</Button>
+        <Button variant="secondary" size="lg">
+          Secondary
+        </Button>
+        <Button variant="tertiary" size="lg">
+          Tertiary
         </Button>
       </Hero>
 
@@ -69,11 +72,11 @@ function ComponentShowcase() {
           <Spacer size="lg" />
 
           <Flex justify="center" gap="lg" wrap={true}>
-            <Button variant="primary">Primary Button</Button>
-            <Button variant="secondary">Secondary Button</Button>
-            <Button variant="outline">Outline Button</Button>
-            <Button variant="ghost">Ghost Button</Button>
-            <Button variant="danger">Danger Button</Button>
+            <Button variant="primary">Primary (Black)</Button>
+            <Button variant="secondary">Secondary (White)</Button>
+            <Button variant="tertiary">Tertiary (Transparent)</Button>
+            <Button variant="accent">Accent (Teal)</Button>
+            <Button variant="ghost">Ghost</Button>
           </Flex>
 
           <Spacer size="lg" />
@@ -195,22 +198,43 @@ function ComponentShowcase() {
       <Section padding="xl" background="default">
         <Container>
           <Heading level="2" align="center">
-            Design System Colors
+            Minimal Color Palette
           </Heading>
+          <Lead style={{ textAlign: "center" }}>
+            Black, White, Teal Accent, and Muted Grey
+          </Lead>
           <Spacer size="lg" />
 
           <Grid cols={4} gap="md" responsive={true}>
             <div
               style={{
-                backgroundColor: "var(--color-primary)",
+                backgroundColor: "var(--color-black)",
                 padding: "var(--space-6)",
                 borderRadius: "var(--border-radius)",
                 color: "white",
                 textAlign: "center",
+                border: "1px solid var(--color-gray-200)",
               }}
             >
               <Text color="inverse" weight="semibold">
+                Black
+              </Text>
+              <Text color="inverse" size="sm">
                 Primary
+              </Text>
+            </div>
+            <div
+              style={{
+                backgroundColor: "var(--color-white)",
+                padding: "var(--space-6)",
+                borderRadius: "var(--border-radius)",
+                textAlign: "center",
+                border: "1px solid var(--color-black)",
+              }}
+            >
+              <Text weight="semibold">White</Text>
+              <Text size="sm" color="secondary">
+                Secondary
               </Text>
             </div>
             <div
@@ -223,12 +247,15 @@ function ComponentShowcase() {
               }}
             >
               <Text color="inverse" weight="semibold">
+                Teal
+              </Text>
+              <Text color="inverse" size="sm">
                 Accent
               </Text>
             </div>
             <div
               style={{
-                backgroundColor: "var(--color-gray-800)",
+                backgroundColor: "var(--color-gray-500)",
                 padding: "var(--space-6)",
                 borderRadius: "var(--border-radius)",
                 color: "white",
@@ -236,18 +263,11 @@ function ComponentShowcase() {
               }}
             >
               <Text color="inverse" weight="semibold">
-                Dark
+                Grey
               </Text>
-            </div>
-            <div
-              style={{
-                backgroundColor: "var(--color-gray-200)",
-                padding: "var(--space-6)",
-                borderRadius: "var(--border-radius)",
-                textAlign: "center",
-              }}
-            >
-              <Text weight="semibold">Light</Text>
+              <Text color="inverse" size="sm">
+                Muted Text
+              </Text>
             </div>
           </Grid>
         </Container>
