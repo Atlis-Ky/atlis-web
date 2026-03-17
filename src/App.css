@@ -54,19 +54,31 @@
   max-height: 80vh;
   object-fit: cover;
   object-position: center 30%;
-  border-radius: var(--border-radius);  filter: grayscale(0%);}
+  border-radius: var(--border-radius);
+  filter: grayscale(0%);
+}
 
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
+    height: auto;
   }
   .hero-left,
   .hero-right {
     width: 100%;
     flex: unset;
   }
+  .hero-left {
+    padding: var(--space-8) var(--space-4);
+  }
+  .hero-right {
+    min-height: 300px;
+    padding: var(--space-6) var(--space-4);
+  }
   .hero-right img {
     max-width: 100%;
+    max-height: 300px;
+    height: 100%;
   }
 }
 
@@ -74,17 +86,75 @@
   padding: var(--space-12) var(--space-6);
 }
 
-.featured-content {
+.releases-grid {
   display: flex;
+  flex-direction: row;
   gap: var(--space-6);
   margin-top: var(--space-6);
 }
 
+.release-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
 .featured-image {
-  width: 350px;
-  height: 350px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: var(--border-radius);
+}
+
+@media (max-width: 768px) {
+  .releases-grid {
+    flex-direction: column;
+  }
+}
+
+/* Hero heading underline effect */
+.hero-left .heading {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-left .heading::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width var(--transition-base);
+}
+
+.hero-left .heading:hover::after {
+  width: 100%;
+}
+
+/* Fade-in on scroll */
+.fade-in-item {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.fade-in-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-item:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+.fade-in-item:nth-child(3) {
+  transition-delay: 0.3s;
 }
 
 /* Footer */
@@ -92,7 +162,7 @@
   background-color: var(--bg-dark);
   color: var(--text-inverse);
   text-align: center;
-  padding: var(--space-8);
+  padding: var(--space-16);
   margin-top: auto;
 }
 

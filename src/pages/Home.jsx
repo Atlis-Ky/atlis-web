@@ -1,7 +1,9 @@
 import React from "react";
 import { Heading, Text, Button } from "../components";
+import useFadeInOnScroll from "../hooks/useFadeInOnScroll";
 
 function Home() {
+  const releasesRef = useFadeInOnScroll();
   return (
     <div className="page-container">
       <section className="hero">
@@ -17,14 +19,32 @@ function Home() {
       </section>
 
       <section className="featured">
-        <Heading level="2">Latest Release</Heading>
-        <Text level="5">Distance (album)</Text>
-        <div className="featured-content">
-          <img
-            src="/atlis-distance-art.jpg"
-            alt="Distance Album"
-            className="featured-image"
-          />
+        <Heading level="2">Latest Releases</Heading>
+        <div className="releases-grid" ref={releasesRef}>
+          <div className="release-card fade-in-item">
+            <img
+              src="/atlis-distance-art.jpg"
+              alt="Distance Album"
+              className="featured-image"
+            />
+            <Text>Distance (Album)</Text>
+          </div>
+          <div className="release-card fade-in-item">
+            <img
+              src="/ambientsquare.jpeg"
+              alt="Ambient Studies EP"
+              className="featured-image"
+            />
+            <Text>Ambient Studies (EP)</Text>
+          </div>
+          <div className="release-card fade-in-item">
+            <img
+              src="/Dreamweaver-cap.jpg"
+              alt="Dreamweaver"
+              className="featured-image"
+            />
+            <Text>Dreamweaver (Single)</Text>
+          </div>
         </div>
       </section>
     </div>
