@@ -5,10 +5,15 @@ function Home() {
   return (
     <div className="page-container">
       <section className="hero">
-        <Heading level="1">Producer</Heading>
-        <Heading level="1">Audio Engineer</Heading>
-        <Heading level="1">Songwriter</Heading>
-        <Text>lo-fi / ambient project</Text>
+        <div className="hero-left">
+          <Heading level="1">Producer</Heading>
+          <Heading level="1">Audio Engineer</Heading>
+          <Heading level="1">Songwriter</Heading>
+          <Text>lo-fi / ambient project by Kyle Smith.</Text>
+        </div>
+        <div className="hero-right">
+          <img src="/atlisblue.jpg" alt="Atlis Profile" />
+        </div>
       </section>
 
       <section className="featured">
