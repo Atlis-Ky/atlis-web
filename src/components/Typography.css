@@ -14,28 +14,28 @@
 }
 
 .heading-1 {
-  font-size: var(--text-5xl);
+  font-size: var(--text-6xl);
   line-height: var(--leading-tight);
   letter-spacing: -0.05em;
 }
 
 .heading-2 {
-  font-size: var(--text-4xl);
+  font-size: var(--text-5xl);
   line-height: var(--leading-tight);
 }
 
 .heading-3 {
-  font-size: var(--text-3xl);
+  font-size: var(--text-4xl);
   line-height: var(--leading-snug);
 }
 
 .heading-4 {
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
   line-height: var(--leading-snug);
 }
 
 .heading-5 {
-  font-size: var(--text-xl);
+  font-size: var(--text-2xl);
   line-height: var(--leading-normal);
 }
 

@@ -25,6 +25,14 @@
   padding: var(--space-16) var(--space-6);
 }
 
+.hero > .heading,
+.hero > .text {
+  text-align: left;
+  align-self: flex-start;
+}
+
+
+
 .featured {
   padding: var(--space-12) var(--space-6);
 }
@@ -36,8 +44,8 @@
 }
 
 .featured-image {
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 350px;
   object-fit: cover;
   border-radius: var(--border-radius);
 }
