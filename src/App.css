@@ -157,6 +157,115 @@
   transition-delay: 0.3s;
 }
 
+/* Shop */
+.shop-page {
+  height: calc(100vh - 65px);
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-8) var(--space-6) var(--space-8);
+  background-color: black;
+  color: white;
+}
+
+.shop-header .heading,
+.shop-header .text {
+  color: white;
+}
+
+.shop-grid-section {
+  padding: var(--space-6) var(--space-6);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.shop-grid {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-6);
+}
+
+.shop-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.shop-card .heading {
+  position: relative;
+  display: inline-block;
+}
+
+.shop-card .heading::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width var(--transition-base);
+}
+
+.shop-card:hover .heading::after {
+  width: 100%;
+}
+
+.shop-card-image-placeholder {
+  width: 100%;
+  max-height: 320px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-gray-100);
+  border-radius: var(--border-radius);
+  border: 2px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2);
+  overflow: hidden;
+  position: relative;
+  transition: border-color var(--transition-base);
+}
+
+.shop-card:hover .shop-card-image-placeholder {
+  border-color: var(--color-accent);
+}
+
+.shop-card-image-placeholder .text {
+  position: relative;
+  z-index: 1;
+}
+
+.shop-card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.3;
+  z-index: 0;
+  filter: grayscale(50%);
+}
+
+@media (max-width: 768px) {
+  .shop-grid {
+    flex-direction: column;
+  }
+}
+
 /* Footer */
 .footer {
   background-color: var(--bg-dark);

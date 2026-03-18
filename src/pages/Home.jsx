@@ -11,6 +11,7 @@ function Home() {
           <Heading level="1">Producer</Heading>
           <Heading level="1">Audio Engineer</Heading>
           <Heading level="1">Songwriter</Heading>
+          <Heading level="5">(Web Developer)</Heading>
           <Text>lo-fi / ambient project by Kyle Smith.</Text>
         </div>
         <div className="hero-right">

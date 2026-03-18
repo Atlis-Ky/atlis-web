@@ -1,26 +1,63 @@
-import React from 'react';
+import React from "react";
+import { Heading, Text } from "../components";
 
 function Shop() {
-  const products = [
-    { id: 1, name: 'Album CD', price: '$15', image: '/product1.jpg' },
-    { id: 2, name: 'Vinyl Record', price: '$30', image: '/product2.jpg' },
-    { id: 3, name: 'T-Shirt', price: '$25', image: '/product3.jpg' },
-    { id: 4, name: 'Poster', price: '$10', image: '/product4.jpg' },
-  ];
-
   return (
-    <div className="page-container">
-      <h1>Shop</h1>
-      <div className="shop-grid">
-        {products.map((product) => (
-          <div key={product.id} className="product-card">
-            <img src={product.image} alt={product.name} className="product-image" />
-            <h3>{product.name}</h3>
-            <p className="price">{product.price}</p>
-            <button className="add-to-cart">Add to Cart</button>
+    <div className="page-container shop-page">
+      <section className="shop-header">
+        <Heading level="2" align="center">
+          MERCHANDISE
+        </Heading>
+        <Text align="center">
+          Nothing to see here (just yet!!) Working on getting a few bits ready
+          to ship in the near future, so stick around and follow for updates on
+          new releases and merch!
+        </Text>
+      </section>
+
+      <section className="shop-grid-section">
+        <div className="shop-grid">
+          <div className="shop-card">
+            <div className="shop-card-image-placeholder">
+              <img
+                src="/public/IMG_8939.jpeg"
+                alt="Hats"
+                className="shop-card-img"
+              />
+              <Heading level="4" align="center">
+                Hats
+              </Heading>
+              <Text align="center">Arriving soon.</Text>
+            </div>
           </div>
-        ))}
-      </div>
+          <div className="shop-card">
+            <div className="shop-card-image-placeholder">
+              <img
+                src="/public/IMG_8940.jpeg"
+                alt="Physical Copies"
+                className="shop-card-img"
+              />
+              <Heading level="4" align="center">
+                Physical Copies
+              </Heading>
+              <Text align="center">Arriving soon.</Text>
+            </div>
+          </div>
+          <div className="shop-card">
+            <div className="shop-card-image-placeholder">
+              <img
+                src="/public/IMG_8908.jpg"
+                alt="Tees"
+                className="shop-card-img"
+              />
+              <Heading level="4" align="center">
+                Tees
+              </Heading>
+              <Text align="center">Arriving soon.</Text>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
