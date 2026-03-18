@@ -6,7 +6,6 @@ import About from "./pages/About";
 import Discography from "./pages/Discography";
 import Shop from "./pages/Shop";
 import Contact from "./pages/Contact";
-import ComponentShowcase from "./pages/ComponentShowcase";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
           <Navigation.Item to="/discography">Discography</Navigation.Item>
           <Navigation.Item to="/shop">Shop</Navigation.Item>
           <Navigation.Item to="/contact">Contact</Navigation.Item>
-          <Navigation.Item to="/showcase">Components</Navigation.Item>
         </Navigation>
 
         <main className="main-content">
@@ -30,7 +28,6 @@ function App() {
             <Route path="/discography" element={<Discography />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/showcase" element={<ComponentShowcase />} />
           </Routes>
         </main>
 
