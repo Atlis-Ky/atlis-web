@@ -1,12 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { lazy, Suspense } from "react";
 import "./App.css";
 import Navigation from "./components/Navigation";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Discography from "./pages/Discography";
-import Shop from "./pages/Shop";
-import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
+
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Discography = lazy(() => import("./pages/Discography"));
+const Shop = lazy(() => import("./pages/Shop"));
+const Contact = lazy(() => import("./pages/Contact"));
 
 function App() {
   return (
@@ -22,13 +24,15 @@ function App() {
         </Navigation>
 
         <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/discography" element={<Discography />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <Suspense fallback={null}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/discography" element={<Discography />} />
+              <Route path="/shop" element={<Shop />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Suspense>
         </main>
 
         <footer className="footer">

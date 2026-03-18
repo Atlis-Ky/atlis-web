@@ -27,6 +27,7 @@ function Home() {
               src="/atlis-distance-art.jpg"
               alt="Distance Album"
               className="featured-image"
+              loading="lazy"
             />
             <Text>Distance (Album)</Text>
           </div>
@@ -35,6 +36,7 @@ function Home() {
               src="/ambientsquare.jpeg"
               alt="Ambient Studies EP"
               className="featured-image"
+              loading="lazy"
             />
             <Text>Ambient Studies (EP)</Text>
           </div>
@@ -43,6 +45,7 @@ function Home() {
               src="/Dreamweaver-cap.jpg"
               alt="Dreamweaver"
               className="featured-image"
+              loading="lazy"
             />
             <Text>Dreamweaver (Single)</Text>
           </div>
