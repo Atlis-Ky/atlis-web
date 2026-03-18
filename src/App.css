@@ -366,6 +366,27 @@
   gap: var(--space-6);
 }
 
+.disco-inner .heading {
+  position: relative;
+  display: inline-block;
+  align-self: flex-start;
+}
+
+.disco-inner .heading::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width var(--transition-base);
+}
+
+.disco-inner .heading:hover::after {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .disco-section-large {
     padding: var(--space-10) var(--space-6);

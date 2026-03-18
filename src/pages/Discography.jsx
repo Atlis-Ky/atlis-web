@@ -31,7 +31,7 @@ const largeSections = [
   },
   {
     id: 2,
-    title: "Ambient Studies",
+    title: "Ambient Studies (EP)",
     description:
       "6 track EP of exclusively instrumental ambient music. Independent release by Atlis, released in 2025.",
     src: "https://open.spotify.com/embed/album/1sZ0RZNA9wOqwEvOS7cUpF?utm_source=generator&theme=0",
@@ -53,13 +53,13 @@ const largeSections = [
 ];
 
 const smallSections = [
-  { id: 5, title: "Release Title Five", src: EMBED_PLACEHOLDER },
-  { id: 6, title: "Release Title Six", src: EMBED_PLACEHOLDER },
-  { id: 7, title: "Release Title Seven", src: EMBED_PLACEHOLDER },
-  { id: 8, title: "Release Title Eight", src: EMBED_PLACEHOLDER },
-  { id: 9, title: "Release Title Nine", src: EMBED_PLACEHOLDER },
-  { id: 10, title: "Release Title Ten", src: EMBED_PLACEHOLDER },
-  { id: 11, title: "Release Title Eleven", src: EMBED_PLACEHOLDER },
+  { id: 5, title: "Dreamweaver", src: "https://open.spotify.com/embed/track/7e6H6Dfci3E7JYsnrgBnNK?utm_source=generator&theme=0" },
+  { id: 6, title: "Light", src: "https://open.spotify.com/embed/track/0ddyX3gdFZcAVLqP7IQHXD?utm_source=generator&theme=0" },
+  { id: 7, title: "Twighlight", src: "https://open.spotify.com/embed/track/7mdmk3CDzXO0RWUgwPiI8G?utm_source=generator&theme=0" },
+  { id: 8, title: "Reconcile (EP)", src: "https://open.spotify.com/embed/album/74dwIdhASHPvGXPZQwS2QF?utm_source=generator&theme=0" },
+  { id: 9, title: "Ghost Town", src: "https://open.spotify.com/embed/track/0KOKnjV6E0DxG0xOlpBpej?utm_source=generator&theme=0" },
+  { id: 10, title: "Never Enough", src: "https://open.spotify.com/embed/track/6l4fFm0n8BDfzwtNh9cICJ?utm_source=generator&theme=0" },
+  { id: 11, title: "Iris", src: "https://open.spotify.com/embed/track/7HNuHDeJ27f6hQmkgC1Tyi?utm_source=generator&theme=0" },
 ];
 
 function Discography() {
@@ -68,7 +68,7 @@ function Discography() {
       {largeSections.map((item) => (
         <section key={item.id} className="disco-section disco-section-large">
           <div className="disco-inner">
-            <Heading level="2">{item.title}</Heading>
+            <Heading level="1">{item.title}</Heading>
             <Text>{item.description}</Text>
             <SpotifyEmbed src={item.src} />
           </div>
