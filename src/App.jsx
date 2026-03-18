@@ -7,10 +7,12 @@ import Discography from "./pages/Discography";
 import Shop from "./pages/Shop";
 import Contact from "./pages/Contact";
 import ComponentShowcase from "./pages/ComponentShowcase";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Navigation logo="Atlis">
           <Navigation.Item to="/">Home</Navigation.Item>
