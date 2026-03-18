@@ -24,31 +24,31 @@ function SpotifyEmbed({ src, compact = false }) {
 const largeSections = [
   {
     id: 1,
-    title: "Release Title One",
+    title: "Distance (album)",
     description:
-      "A short description of this release — the inspiration, mood, and themes behind the project.",
-    src: EMBED_PLACEHOLDER,
+      "Label release. 3rd lo-fi album by Atlis, released in 2025 via Sleep Tales.",
+    src: "https://open.spotify.com/embed/album/5c40z37UtSz4IhtHQ1Q35h?utm_source=generator&theme=0",
   },
   {
     id: 2,
-    title: "Release Title Two",
+    title: "Ambient Studies",
     description:
-      "A short description of this release — the inspiration, mood, and themes behind the project.",
-    src: EMBED_PLACEHOLDER,
+      "6 track EP of exclusively instrumental ambient music. Independent release by Atlis, released in 2025.",
+    src: "https://open.spotify.com/embed/album/1sZ0RZNA9wOqwEvOS7cUpF?utm_source=generator&theme=0",
   },
   {
     id: 3,
-    title: "Release Title Three",
+    title: "Exploration (album)",
     description:
-      "A short description of this release — the inspiration, mood, and themes behind the project.",
-    src: EMBED_PLACEHOLDER,
+      "Label release. 2nd lo-fi album by Atlis, released in 2023 via Sleep Tales.",
+    src: "https://open.spotify.com/embed/album/69AAYBGbdmHwyHbLYL5i2I?utm_source=generator&theme=0",
   },
   {
     id: 4,
-    title: "Release Title Four",
+    title: "Dreamscape (album)",
     description:
-      "A short description of this release — the inspiration, mood, and themes behind the project.",
-    src: EMBED_PLACEHOLDER,
+      "Debut album by Atlis, released in 2021. Label release via Sleep Tales.",
+    src: "https://open.spotify.com/embed/album/2NBE2hXvKjdFgyN9zfpP8t?utm_source=generator&theme=0",
   },
 ];
 

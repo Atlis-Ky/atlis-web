@@ -327,7 +327,25 @@
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid black;
+}
+
+.disco-section:nth-child(odd) {
   background-color: white;
+}
+
+.disco-section:nth-child(odd) .heading,
+.disco-section:nth-child(odd) .text {
+  color: black;
+}
+
+.disco-section:nth-child(even) {
+  background-color: black;
+  border-bottom-color: white;
+}
+
+.disco-section:nth-child(even) .heading,
+.disco-section:nth-child(even) .text {
+  color: white;
 }
 
 .disco-section-large {
