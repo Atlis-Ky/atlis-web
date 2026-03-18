@@ -1,11 +1,13 @@
 import React from "react";
 import { Heading, Text } from "../components";
+import useFadeInOnScroll from "../hooks/useFadeInOnScroll";
 
 function About() {
+  const pageRef = useFadeInOnScroll();
   return (
-    <div className="page-container">
+    <div className="page-container" ref={pageRef}>
       {/* Producer */}
-      <section className="about-section">
+      <section className="about-section fade-in-item">
         <div className="about-text">
           <Heading level="1">Producer</Heading>
           <Text>
@@ -28,7 +30,7 @@ function About() {
       </section>
 
       {/* Audio Engineer */}
-      <section className="about-section">
+      <section className="about-section fade-in-item">
         <div className="about-image-panel">
           <img
             src="/snowblue3.jpg"
@@ -51,7 +53,7 @@ function About() {
       </section>
 
       {/* Songwriter */}
-      <section className="about-section">
+      <section className="about-section fade-in-item">
         <div className="about-text">
           <Heading level="1">Songwriter</Heading>
           <Text>
@@ -72,7 +74,7 @@ function About() {
       </section>
 
       {/* Web Developer */}
-      <section className="about-section">
+      <section className="about-section fade-in-item">
         <div className="about-image-panel">
           <img
             src="/snowblue.jpg"

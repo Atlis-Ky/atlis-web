@@ -1,5 +1,6 @@
 import React from "react";
 import { Heading, Text } from "../components";
+import useFadeInOnScroll from "../hooks/useFadeInOnScroll";
 
 const EMBED_PLACEHOLDER =
   "https://open.spotify.com/embed/album/1sZ0RZNA9wOqwEvOS7cUpF?utm_source=generator&theme=0";
@@ -53,20 +54,52 @@ const largeSections = [
 ];
 
 const smallSections = [
-  { id: 5, title: "Dreamweaver", src: "https://open.spotify.com/embed/track/7e6H6Dfci3E7JYsnrgBnNK?utm_source=generator&theme=0" },
-  { id: 6, title: "Light", src: "https://open.spotify.com/embed/track/0ddyX3gdFZcAVLqP7IQHXD?utm_source=generator&theme=0" },
-  { id: 7, title: "Twighlight", src: "https://open.spotify.com/embed/track/7mdmk3CDzXO0RWUgwPiI8G?utm_source=generator&theme=0" },
-  { id: 8, title: "Reconcile (EP)", src: "https://open.spotify.com/embed/album/74dwIdhASHPvGXPZQwS2QF?utm_source=generator&theme=0" },
-  { id: 9, title: "Ghost Town", src: "https://open.spotify.com/embed/track/0KOKnjV6E0DxG0xOlpBpej?utm_source=generator&theme=0" },
-  { id: 10, title: "Never Enough", src: "https://open.spotify.com/embed/track/6l4fFm0n8BDfzwtNh9cICJ?utm_source=generator&theme=0" },
-  { id: 11, title: "Iris", src: "https://open.spotify.com/embed/track/7HNuHDeJ27f6hQmkgC1Tyi?utm_source=generator&theme=0" },
+  {
+    id: 5,
+    title: "Dreamweaver",
+    src: "https://open.spotify.com/embed/track/7e6H6Dfci3E7JYsnrgBnNK?utm_source=generator&theme=0",
+  },
+  {
+    id: 6,
+    title: "Light",
+    src: "https://open.spotify.com/embed/track/0ddyX3gdFZcAVLqP7IQHXD?utm_source=generator&theme=0",
+  },
+  {
+    id: 7,
+    title: "Twighlight",
+    src: "https://open.spotify.com/embed/track/7mdmk3CDzXO0RWUgwPiI8G?utm_source=generator&theme=0",
+  },
+  {
+    id: 8,
+    title: "Reconcile (EP)",
+    src: "https://open.spotify.com/embed/album/74dwIdhASHPvGXPZQwS2QF?utm_source=generator&theme=0",
+  },
+  {
+    id: 9,
+    title: "Ghost Town",
+    src: "https://open.spotify.com/embed/track/0KOKnjV6E0DxG0xOlpBpej?utm_source=generator&theme=0",
+  },
+  {
+    id: 10,
+    title: "Never Enough",
+    src: "https://open.spotify.com/embed/track/6l4fFm0n8BDfzwtNh9cICJ?utm_source=generator&theme=0",
+  },
+  {
+    id: 11,
+    title: "Iris",
+    src: "https://open.spotify.com/embed/track/7HNuHDeJ27f6hQmkgC1Tyi?utm_source=generator&theme=0",
+  },
 ];
 
 function Discography() {
+  const pageRef = useFadeInOnScroll();
   return (
-    <div className="page-container">
+    <div className="page-container" ref={pageRef}>
       {largeSections.map((item) => (
-        <section key={item.id} className="disco-section disco-section-large">
+        <section
+          key={item.id}
+          className="disco-section disco-section-large fade-in-item"
+        >
           <div className="disco-inner">
             <Heading level="1">{item.title}</Heading>
             <Text>{item.description}</Text>
@@ -76,7 +109,10 @@ function Discography() {
       ))}
 
       {smallSections.map((item) => (
-        <section key={item.id} className="disco-section disco-section-small">
+        <section
+          key={item.id}
+          className="disco-section disco-section-small fade-in-item"
+        >
           <div className="disco-inner">
             <Heading level="3">{item.title}</Heading>
             <SpotifyEmbed src={item.src} compact />
