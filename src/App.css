@@ -436,7 +436,7 @@
   object-fit: cover;
   object-position: center 60%;
   border-radius: var(--border-radius);
-  filter: grayscale(90%);
+  filter: grayscale(30%);
 }
 
 .contact-text {
@@ -522,10 +522,30 @@
   text-align: center;
   padding: var(--space-16);
   margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
 }
 
 .footer p {
   margin: 0;
   font-size: var(--text-sm);
   color: var(--color-gray-400);
+}
+
+.footer-github {
+  display: inline-flex;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.footer-github:hover {
+  opacity: 1;
+}
+
+.footer-github-icon {
+  width: 34px;
+  height: 34px;
+  filter: invert(1);
 }

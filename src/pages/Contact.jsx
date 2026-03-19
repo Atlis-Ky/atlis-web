@@ -2,11 +2,11 @@ import React from "react";
 import { Heading, Text } from "../components";
 
 const links = [
-  { label: "Spotify", href: "https://open.spotify.com/artist/" },
-  { label: "Apple Music", href: "https://music.apple.com/" },
-  { label: "Instagram", href: "https://instagram.com/" },
-  { label: "Email", href: "mailto:kyle@example.com" },
-  { label: "GitHub", href: "https://github.com/" },
+  { label: "Spotify", href: "https://open.spotify.com/artist/0rPg5GzRyLsiWkNcRSEXUU?si=67qDTh1aTmiAvmucQwEVCA" },
+  { label: "Apple Music", href: "https://music.apple.com/us/artist/atlis/1468014326" },
+  { label: "Instagram", href: "https://www.instagram.com/atlisbeets/" },
+  { label: "Email", href: "mailto:atlisbeets@gmail.com" },
+  { label: "GitHub", href: "https://github.com/Atlis-Ky" },
 ];
 
 function Contact() {
@@ -14,7 +14,7 @@ function Contact() {
     <div className="page-container">
       <section className="contact-section">
         <div className="contact-image-panel">
-          <img src="/kyle.jpg" alt="Kyle Smith" className="contact-image" />
+          <img src="/kyle.jpg" alt="Kyle" className="contact-image" />
         </div>
 
         <div className="contact-text">

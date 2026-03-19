@@ -37,6 +37,19 @@ function App() {
 
         <footer className="footer">
           <p>&copy; 2026 Atlis. Made in React by Kyle Smith</p>
+          <a
+            href="https://github.com/Atlis-Ky"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-github"
+            aria-label="GitHub"
+          >
+            <img
+              src="/github.svg"
+              alt="GitHub"
+              className="footer-github-icon"
+            />
+          </a>
         </footer>
       </div>
     </Router>
