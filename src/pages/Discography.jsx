@@ -2,9 +2,6 @@ import React from "react";
 import { Heading, Text } from "../components";
 import useFadeInOnScroll from "../hooks/useFadeInOnScroll";
 
-const EMBED_PLACEHOLDER =
-  "https://open.spotify.com/embed/album/1sZ0RZNA9wOqwEvOS7cUpF?utm_source=generator&theme=0";
-
 function SpotifyEmbed({ src, compact = false }) {
   return (
     <iframe

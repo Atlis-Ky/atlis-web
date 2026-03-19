@@ -100,12 +100,30 @@
   gap: var(--space-3);
 }
 
+.release-card-link {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  border: 2px solid transparent;
+  transition: border-color 0.25s ease;
+}
+
+.release-card-link:hover {
+  border-color: var(--color-primary);
+}
+
+.release-card-link:hover .featured-image {
+  transform: scale(1.04);
+}
+
 .featured-image {
   width: 100%;
   height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: var(--border-radius);
+  transition: transform 0.35s ease;
+  display: block;
 }
 
 @media (max-width: 768px) {

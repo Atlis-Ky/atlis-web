@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Text, Button } from "../components";
+import { Heading, Text } from "../components";
 import useFadeInOnScroll from "../hooks/useFadeInOnScroll";
 
 function Home() {
@@ -23,30 +23,51 @@ function Home() {
         <Heading level="2">Latest Releases</Heading>
         <div className="releases-grid" ref={releasesRef}>
           <div className="release-card fade-in-item">
-            <img
-              src="/atlis-distance-art.jpg"
-              alt="Distance Album"
-              className="featured-image"
-              loading="lazy"
-            />
+            <a
+              href="https://open.spotify.com/album/5c40z37UtSz4IhtHQ1Q35h?si=PKsAmCskTyGE5nFLw3wVeg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="release-card-link"
+            >
+              <img
+                src="/atlis-distance-art.jpg"
+                alt="Distance Album"
+                className="featured-image"
+                loading="lazy"
+              />
+            </a>
             <Text>Distance (Album)</Text>
           </div>
           <div className="release-card fade-in-item">
-            <img
-              src="/ambientsquare.jpeg"
-              alt="Ambient Studies EP"
-              className="featured-image"
-              loading="lazy"
-            />
+            <a
+              href="https://open.spotify.com/album/1sZ0RZNA9wOqwEvOS7cUpF?si=tfPIUZJoTXSaZDmlugJpbA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="release-card-link"
+            >
+              <img
+                src="/ambientsquare.jpeg"
+                alt="Ambient Studies EP"
+                className="featured-image"
+                loading="lazy"
+              />
+            </a>
             <Text>Ambient Studies (EP)</Text>
           </div>
           <div className="release-card fade-in-item">
-            <img
-              src="/Dreamweaver-cap.jpg"
-              alt="Dreamweaver"
-              className="featured-image"
-              loading="lazy"
-            />
+            <a
+              href="https://open.spotify.com/track/7e6H6Dfci3E7JYsnrgBnNK?si=9dbdd41be4294d05"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="release-card-link"
+            >
+              <img
+                src="/Dreamweaver-cap.jpg"
+                alt="Dreamweaver"
+                className="featured-image"
+                loading="lazy"
+              />
+            </a>
             <Text>Dreamweaver (Single)</Text>
           </div>
         </div>
