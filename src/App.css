@@ -190,7 +190,7 @@
 
 /* Shop */
 .shop-page {
-  height: calc(100vh - 65px);
+  min-height: calc(100vh - 65px);
   display: flex;
   flex-direction: column;
 }
@@ -345,6 +345,9 @@
   .about-section {
     flex-direction: column;
     height: auto;
+  }
+  .about-text {
+    padding: var(--space-8) var(--space-5);
   }
   .about-image-panel {
     min-height: 260px;

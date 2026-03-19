@@ -161,19 +161,19 @@
 
 @media (max-width: 768px) {
   .heading-1 {
-    font-size: var(--text-4xl);
-  }
-
-  .heading-2 {
     font-size: var(--text-3xl);
   }
 
-  .heading-3 {
+  .heading-2 {
     font-size: var(--text-2xl);
   }
 
-  .heading-4 {
+  .heading-3 {
     font-size: var(--text-xl);
+  }
+
+  .heading-4 {
+    font-size: var(--text-lg);
   }
 
   .text-lead {

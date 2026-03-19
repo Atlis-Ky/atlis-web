@@ -63,7 +63,11 @@ const Navigation = ({
 
       {/* Mobile Menu */}
       <div className={`nav-mobile ${mobileMenuOpen ? "active" : ""}`}>
-        {children}
+        {React.Children.map(children, (child) =>
+          React.cloneElement(child, {
+            onClick: () => setMobileMenuOpen(false),
+          }),
+        )}
       </div>
     </nav>
   );
