@@ -19,11 +19,7 @@ function Shop() {
         <div className="shop-grid">
           <div className="shop-card">
             <div className="shop-card-image-placeholder">
-              <img
-                src="/public/IMG_8939.jpeg"
-                alt="Hats"
-                className="shop-card-img"
-              />
+              <img src="/IMG_8939.jpeg" alt="Hats" className="shop-card-img" />
               <Heading level="4" align="center">
                 Hats
               </Heading>
@@ -33,7 +29,7 @@ function Shop() {
           <div className="shop-card">
             <div className="shop-card-image-placeholder">
               <img
-                src="/public/IMG_8940.jpeg"
+                src="/IMG_8940.jpeg"
                 alt="Physical Copies"
                 className="shop-card-img"
               />
@@ -45,11 +41,7 @@ function Shop() {
           </div>
           <div className="shop-card">
             <div className="shop-card-image-placeholder">
-              <img
-                src="/public/IMG_8908.jpg"
-                alt="Tees"
-                className="shop-card-img"
-              />
+              <img src="/IMG_8908.jpg" alt="Tees" className="shop-card-img" />
               <Heading level="4" align="center">
                 Tees
               </Heading>
